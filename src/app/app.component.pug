@@ -1,0 +1,14 @@
+.container
+
+  h1
+    | Text quest engine 0.0.1
+
+  .wrapper
+    | {{description}}
+
+    div(*ngFor='let option of options')
+        .option
+          button(
+          type='button',
+          (click)='goToStep(option.name)')
+            | {{option.headline}}
